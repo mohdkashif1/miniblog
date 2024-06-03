@@ -30,6 +30,7 @@ app.use(express.json({ limit: "50mb", extended: true, parameterLimit: 50000 }))
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(fileUpload())
 
+app.get('/',(req,res)=>res.send('i am kashif'))
 app.use('/',publicRouter)
 app.use('/admin',adminRouter)
 
