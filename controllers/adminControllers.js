@@ -145,6 +145,7 @@ try{
 
 const createAdmin=async(req,res)=>{
     const {name,email,password}=req.body
+    console.log(req.body)
     const userExists = await Admin.findOne({email})
 if(userExists){
     res.status(400)
